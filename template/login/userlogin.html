@@ -1,0 +1,15 @@
+<div class="col-sm-4" style="background-color: #f9f9f9; border: inherit;border-radius: 5px;margin-left: 230px">
+    <br/>
+    <span>{{message}}</span><br/><br/>
+    <div ng-controller="LoginControllerCtrl">
+        <form class="form-horizontal">
+            <label>Username</label>
+            <input type="text" name="user.email" ng-model="user.email"/><br/>
+            <label>Password</label>
+            <input type="text" name="user.password" ng-model="user.password"/><br/>
+
+            <input type="submit" class="btn btn-primary" ng-click="validateUser(user)" value="Login" style="margin-left: 120px">
+        </form>
+    </div>
+<br/>
+</div>
