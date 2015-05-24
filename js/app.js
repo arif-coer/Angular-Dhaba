@@ -7,6 +7,12 @@ var dhabaApp = angular.module('dhabaApp', [
   'welcomeController',
   'userService'
 ]);
+
+dhabaApp.config(function($httpProvider) {
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+});
+
 dhabaApp.config(function($routeProvider) {
   $routeProvider.
       when('/', {
